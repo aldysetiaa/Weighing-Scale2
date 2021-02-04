@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+    <meta name="author" content="Aldy Setiawan">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-language" content="en">
+		<!-- <link rel="stylesheet" href="main.css"> -->
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+ 
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  
+    <!-- CSS Base -->
+    <link id="theme" rel="stylesheet" href="../assets/css/themes/theme-orange.css" />
+    <style> 
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+ 
+ 
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+</style>
+    <style type="text/css"> 
+        @font-face{ 
+              font-family: 'DS-DIGIB';
+              src: url("assets/fonts/DS-DIGIB.TTF") format("truetype"); 
+            }
+        .read{
+            background: #b1ffcd;
+        }
+          .red{
+            background: red;
+            color: white;
+        }
+        .indicator{
+           font-family: "DS-DIGIB";
+            background: black;
+            color: red;    
+            font-size: 70px;
+            text-align: center;
+            font-weight: bold;
+            padding: 0px;
+            margin: 0px;
+            width: 400px;
+        }
+        #info{
+            margin-top: 5px;
+            color: green;
+        }
+        #reset_data{
+        	background: #f14b25;
+		    color: white;
+		    padding: 9px;
+		    border-collapse: collapse;
+		    border-width: 0px;
+		    /*margin-left: 10px;*/
+        }
+
+        #reset_data:hover{
+        	background: #c62211; 
+        	color: #000;
+        }
+  #reset_datakpcc{
+            background: #f14b25;
+            color: white;
+            padding: 9px;
+            border-collapse: collapse;
+            border-width: 0px;
+            /*margin-left: 10px;*/
+        }
+
+        #reset_datakpcc:hover{
+            background: #c62211; 
+            color: #000;
+        }
+         #save_hasil{
+        	background: #3b25f1;
+		    color: white;
+		    padding: 9px;
+		    border-collapse: collapse;
+		    border-width: 0px;
+		    /*margin-left: 10px;*/
+        }
+
+        #save_hasil:hover{
+        	background: #3728b8; 
+        	color: #000;
+        }
+            #save_hasilkpcc{
+            background: #00BCD4;
+            color: white;
+            padding: 9px;
+            border-collapse: collapse;
+            border-width: 0px;
+            /*margin-left: 10px;*/
+        }
+
+        #save_hasilkpcc:hover{
+            background: #03A9F4; 
+            color: #000;
+        }
+
+        select{
+        	padding: 5px;
+        }
+        #connect_button{
+        	background: #255af1;
+		    color: white;
+		    padding: 5px;
+		    border-collapse: collapse;
+		    border-width: 0px;
+		    /*margin-left: 10px;*/
+        }
+    </style>
+	</head>
+	
+<body id="bdy" class="one-page header-vertical" ng-controller='mainCtrl'>
+	 
+<!-- Loader -->
+<div id="page-loader" class="bg-white">
+    <svg class="loader" width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle class="circle" fill="none" stroke-width="2" stroke-linecap="round" cx="16" cy="16" r="14"></circle></svg>
+    <span class="loading-txt text-muted">Wait for some magic...</span>
+</div>
+<!-- Loader / End -->
+-
+	<div id="login" class="col-sm-12" style="padding: 100px 400px 80px 400px"  > 
+<div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out"> 
+    <div class="page-content vertical-align-middle">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="brand">
+            <img class="brand-img" src="../images/krng.png" alt="..." style="width: 80px;margin-bottom: 20px;">
+            <h2 class="brand-text font-size-18">Weighing Scale System</h2>
+          </div> 
+            <div class="form-group form-material floating" data-plugin="formMaterial">
+              <label class="pull-left">Username</label> 
+              <input type="text" class="form-control empty" autofocus=""  id="user">
+            </div>
+            <div class="form-group form-material floating" data-plugin="formMaterial">
+              <label class="pull-left">Password</label>
+              <input type="password" class="form-control empty"  id="password">
+            </div>
+           
+            <button style="background: #3f51b5; color: #fff; margin:0px; padding: 15px;" type="submit" id="sign" class="btn btn-primary btn-block btn-lg mt-40 waves-effect waves-classic">Sign in</button>  
+            <br>
+            <p style="color: red;  margin:0px; padding: 0px;" id="gagal" > </p>
+        </div>
+      </div> 
+<br>
+<br>
+<br>
+      <footer class="page-copyright page-copyright-inverse" style="color: white; margin:0px; padding: 0px;">
+        <p style="color: white; margin:0px; padding: 0px;">Developed By : </p> 
+        <p style="color: white; margin:0px; padding: 0px;">IT PT KRNG INDONESIA</p> 
+        <p style="color: white; margin:0px; padding: 0px;">&copy; 2019</p> 
+         </footer>
+    </div>
+  </div>
+  <!-- End Page -->
+	</div> 
+
+	<div id="data" >
+
+<!-- Header -->
+<header id="header">
+
+    <!-- Owner -->
+    <a title="link" href="#home" class="owner">
+        <img src="../images/krng.png" alt="Image not found" class="image">
+        <div class="content">
+            <h2 class="name">Weighing Scale System</h2>
+            <h2 class="caption text-muted">PT. KRNG INDONESIA</h2>
+        </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="main-menu">
+        <div class="nav-wrapper">
+            <ul class="nav nav-primary">
+                <li><a title="link" href="#home"><i class="li-home"></i>Home</a></li>
+                <li><a title="link" href="#about"><i class="ti-truck"></i>Weighing Scale</a></li>
+                <li><a title="link" href="#cases" id="timbangtimbang"><i class="ti-package"></i>Timbang Isi</a></li>
+                <li>
+                    <a title="link" href="http://sys-krng.xyz/admin/index.php?page=list_lpo_ccrm" target="_BLANK" ><i class="ti-printer"></i>Cetak Surat Jalan</a>
+                </li>
+                <li><hr></li>
+                <li><b>KPCC WEIGHING</b></li> 
+                <li><hr></li>
+                <li><a title="link" href="#tkkpcc"><i class="ti-truck"></i>Timbang Kosong KPCC</a></li>
+                <li><a title="link" href="#tikpcc" id="tikapcc"><i class="ti-package"></i>Timbang Isi KPCC</a></li>
+                <li>
+                    <a title="link" href="http://sys-krng.xyz/admin/index.php?page=data_timbangkpcc" target="_BLANK" ><i class="ti-printer"></i>Cetak KPCC</a>
+                </li>
+            </ul>
+        </div>
+        <span class="selector"></span>
+    </nav>
+
+    <!-- Bottom -->
+    <div class="bottom">  
+        <span class="text-muted" style="text-transform:none;">Developer By :</span><br>
+        <span class="text-muted">IT PT KRNG INDONESIA</span>
+    </div>
+
+</header>
+<!-- Header / End -->
+
+<!-- Content -->
+<div id="content">
+
+    <!-- Section / Home -->
+    <section id="home" class="section fullheight dark">
+        <!-- banner -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6279639054442544"
+     data-ad-slot="9825470002"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins> 
+        <!-- BG Slideshow -->
+        <div class="bg-slideshow">
+         <!--    <div class="bg-image zooming"><img src="assets/img/photos/profile-bg1.jpg" alt="Image not found"></div>
+            <div class="bg-image zooming"><img src="assets/img/photos/profile-bg2.jpg" alt="Image not found"></div>
+            <div class="bg-image zooming"><img src="assets/img/photos/profile-bg3.jpg" alt="Image not found"></div> -->
+        </div>
+
+        <div class="v-center container-fluid container-custom">
+            <div class="row">
+                <div class="col-md-12 w-100">
+                    <h1 class="display-3">Weighing Scale System</h1>
+                    <h2 class="caption text-primary" style="color: green !important;"><span id="role">PT. KRNG INDONESIA</span></h2>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Section / About -->
+    <section id="about" class="section">
+
+        <div class="container container-lg">
+
+            
+            <div class="row rowmain">
+                <div class="col-md-7">
+                    <h2>Weighing Scale</h2>
+                  <hr />
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+ 
+<br>
+    <div id="baru">
+    	<form id="dataForm">
+
+	<table   border="0" width="800">
+		<tr>
+			<th> No. Record </th><th>:</th><td style="width: 200px;">
+				<input type="text"  class="read" readonly name="kode" id="kode"  ></td> 
+		</tr>
+        <tr>
+            <th> Mobil </th><th>:</th><td>
+                <input type="hidden" name="id_car" id="id_car" > 
+                 <input type="text" name="kode_tank" id="kode_tank" autofocus placeholder="Scan Kartu Disini" ></td>
+                <td><input type="text" name="no_polisi" id="no_polisi" placeholder="Nomor Polisi" class="read" readonly ></td>
+                <td><input type="text" name="stts" id="stts" class="read" placeholder="Status Mobil" readonly >
+
+            </td>
+        </tr>
+        <tr> 
+            <td></td>
+            <td></td>
+            <td>
+                  <small style="color: red;" id="stcar" ></small>
+            </td>
+        </tr>
+        <tr>
+            <th> Sopir </th><th>:</th><td>
+                <input type="hidden" name="id_sopir" id="id_sopir" >
+                <input type="text" placeholder="Scan Kartu Disini" name="sopir" id="sopir" ></td>
+                
+                <td rowspan="6" colspan="2"  align="center">
+                <div id="receive_area">
+                    <input type="text" readonly name="kg" class="indicator"  id="hasilkg">
+                    <textarea hidden id="receive_textarea" readonly></textarea>
+                </div>
+                <br>
+                <button id="tbk" >TIMBANG KOSONG</button> 
+                <button id="tbi" >TIMBANG ISI</button> 
+                
+                </td> 
+        </tr>
+        <tr>
+            <th> Tgl. Masuk </th><th>:</th><td><input type="text" name="tglmasuk" id="tglmasuk" readonly class="read" ></td> 
+        </tr> 
+        <tr>
+            <th>Tara</th><th>:</th><td><input type="number" class="red" name="tbkosong" id="tbkosong" >Kg</td>
+        </tr>
+        <tr>
+            <th>Bruto</th><th>:</th><td><input type="text" class="read" name="brutto" id="brutto" readonly>Kg</td>
+        </tr>
+        <tr>
+            <th>Netto</th><th>:</th><td><input type="text" class="read" name="netto" id="netto" readonly>Kg</td>
+        </tr>
+        <tr>
+            <th> </th><th> </th><td><br><button id="save_hasil" >Simpan Data</button> 
+            	<button id="reset_data" >Reset Data</button> <p id="info"></p></td>
+        </tr>
+	</table>
+</form>	 
+</div>
+<div id="lama" >
+   
+</div>
+	<div id="white_space"></div>
+    <br> 
+    <br> 
+    <br> 
+	<hr />
+	   <h2> Setting Port</h2>
+	<hr/>
+    <div id="connect_line">
+		<label for="serial_ports" id="serial_ports_label"  >Serial port:</label>
+		<select id="serial_ports_combobox" class="combobox">
+		</select>
+		<label for="baud_rates" id="baud_rates_label" >Speed:</label>
+		<select id="baud_rates_combobox" class="combobox"> 
+			<option value="1200">1200 baud</option> 
+		</select>		
+		<input type="button" id="connect_button" value="Connect" />	
+		<input type="hidden" name="a" id="aa">
+		<input type="hidden" name="aaa" id="btnA" value="javascript"  > 
+	</div> 
+	</div>
+                </div>
+            </div>
+          
+            </div> 
+    </section>
+    <!-- Section / portfolio -->
+    <section id="cases" class="section" >
+
+        <div class="container-fluid container-custom">
+            <h2 class="mb-50">Data Timbang Kosong</h2>
+             <table id="tampil" border="1" width="100%" >
+                <tr>
+                    <th style="text-align:center;">No</th>
+                    <th style="text-align:center;">Kode Timbang</th>
+                    <th style="text-align:center;">Nomor Polisi</th>
+                    <th style="text-align:center;">Sopir</th>  
+                    <th style="text-align:center;">Tgl & Jam </th>
+                    <th style="text-align:center;">Berat Kosong</th>
+                </tr>
+                <tr> 
+                </tr>
+             </table> 
+             <br>
+             <hr>
+             <br>
+<!-- TIMBANG ISI -->
+        <form id="dataFormLama">
+
+    <table   border="0" width="800">
+        <tr>
+            <th> No. Record </th><th>:</th><td style="width: 200px;">
+                <input type="text"    name="kodeLama" id="kodeLama" autofocus ></td> 
+        </tr>
+        <tr>
+            <th> Mobil </th><th>:</th><td>
+                <input type="hidden" name="id" id="idLama" > 
+                 <input type="text" readonly class="read" name="kode_tank" id="kode_tankLama"   ></td>
+                <td><input type="text" name="no_polisi" id="no_polisiLama" placeholder="Nomor Polisi" class="read" readonly ></td>
+                <td><input type="text" name="stts" id="sttsLama" class="read" placeholder="Status Mobil" readonly >
+
+            </td>
+        </tr>
+        <tr> 
+            <td></td>
+            <td></td>
+            <td>
+                  <small style="color: red;" id="stcar" ></small>
+            </td>
+        </tr>
+        <tr>
+            <th> Sopir </th><th>:</th><td> 
+                <input type="text"  class="read" readonly name="sopirLama" id="sopirLama" ></td>
+                
+                <td rowspan="6" colspan="2"  align="center"> 
+                    <input type="text" readonly name="kgLama" class="indicator" value="" id="hasilkgLama">
+                    
+                <br> 
+                <button id="tbiLama" >TIMBANG ISI</button>  
+                </td> 
+        </tr>
+        <tr>
+            <th> Tgl. Masuk </th><th>:</th><td><input type="text" name="tglmasukLama" id="tglmasukLama" readonly class="read" ></td> 
+        </tr> 
+        <tr>
+            <th>Tara</th><th>:</th><td><input type="text" class="read" name="tbkosongLama" id="tbkosongLama" readonly>Kg</td>
+        </tr>
+        <tr>
+            <th>Bruto</th><th>:</th><td><input type="text" class="read" name="bruttoLama" id="bruttoLama" readonly>Kg</td>
+        </tr>
+        <tr>
+            <th>Netto</th><th>:</th><td><input type="text" class="read" name="nettoLama" id="nettoLama" readonly>Kg</td>
+        </tr>
+        <tr>
+            <th> </th><th> </th><td><br><button id="save_hasilLama" >Simpan Data</button> 
+                <button id="reset_dataLama" >Reset Data</button>
+                 <p id="infoLama"></p></td>
+        </tr>
+    </table>
+</form>  
+</div>
+       
+<!-- TIMBANG ISI -->
+    </section>
+
+
+
+<!-- SECTION KPCC -->
+<!-- SECTION KPCC TIMBANG KOSONG -->
+  <section id="tkkpcc" class="section">
+
+        <div class="container container-lg">
+
+            
+            <div class="row rowmain">
+                <div class="col-md-7">
+                    <h2>Timbang Kosong KPCC</h2>
+                  <hr />
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+ 
+<br>
+    <div id="baru">
+        <form id="dataFormkpcc">
+
+    <table   border="0" width="800">
+        <tr>
+            <th> No. Record </th><th>:</th><td style="width: 200px;">
+                <input type="text"  class="read" readonly name="kodekpcc" id="kodekpcc"  ></td> 
+        </tr>
+
+        <tr>
+            <th> Vendor </th><th>:</th><td> 
+                <select name="vendor" style="width: 180px;" id="vendor" required>
+                    <option value="">Pilih Vendor</option>
+                    <option value="PT.SMI">PT.SMI</option>
+                    <option value="PT.WSP">PT.WSP</option>
+                </select>
+            </td>
+        </tr> 
+
+        <tr>
+            <th> Mobil </th><th>:</th><td> 
+               <input type="text" name="no_polisikpcc" style="text-transform: uppercase;" id="no_polisikpcc" placeholder="Masukan No. Polisi" required >
+            </td>
+        </tr> 
+        <tr>
+            <th> Sopir </th><th>:</th><td> 
+                <input type="text" placeholder="Masukan nama sopir" required  style="text-transform: uppercase;"  name="sopirkpcc" id="sopirkpcc" ></td>
+                
+                <td rowspan="6" colspan="2"  align="center"> 
+                    <input type="text" readonly name="hasilkgkpcc" class="indicator"  id="hasilkgkpcc">  
+                <br>
+                <button id="tbkkpcc" >TIMBANG KOSONG</button>  
+                
+                </td> 
+        </tr> 
+        <tr>
+            <th>Tara</th><th>:</th><td><input type="number" class="red" name="tbkosongkpcc" id="tbkosongkpcc" >Kg</td>
+        </tr>
+         
+        <tr>
+            <th> </th><th> </th><td><br><button id="save_hasilkpcc" >Simpan Data</button> 
+                <button id="reset_datakpcc" >Reset Data</button> <p id="infokpcc"></p></td>
+        </tr>
+    </table>
+</form>  
+</div>
+ 
+      
+    </div>
+                </div>
+            </div>
+          
+            </div> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    </section>
+ 
+<!-- SECTION KPCC TIMBANG ISI -->
+ <section id="tikpcc" class="section">
+ 
+
+        <div class="container-fluid container-custom">
+            <h2 class="mb-50">Data Timbang Kosong KPCC</h2>
+             <table id="tampilkpcc" border="1" width="100%" >
+                <tr>
+                    <th style="text-align:center;">No</th>
+                    <th style="text-align:center;">Vendor</th>
+                    <th style="text-align:center;">Kode Timbang</th>
+                    <th style="text-align:center;">Nomor Polisi</th>
+                    <th style="text-align:center;">Sopir</th>  
+                    <th style="text-align:center;">Tgl & Jam </th>
+                    <th style="text-align:center;">Berat Kosong</th>
+                </tr>
+                <tr> 
+                </tr>
+             </table> 
+             <br>
+             <hr>
+             <br>
+<!-- TIMBANG ISI -->
+        <form id="dataFormLamakpcc">
+
+    <table   border="0" width="800">
+        <tr>
+            <th> No. Record </th><th>:</th><td style="width: 200px;">
+                <input type="text"    name="kodeLamakpcc" id="kodeLamakpcc" autofocus ></td> 
+        </tr>
+        <tr>
+            <th> Mobil </th><th>:</th><td>  
+           <input type="text" name="no_polisikpcc" id="no_polisiLamakpcc" placeholder="Nomor Polisi" class="read" readonly > 
+            </td>
+        </tr>
+        <tr> 
+            <td></td>
+            <td></td>
+            <td>
+                  <small style="color: red;" id="stcarkpcc" ></small>
+            </td>
+        </tr>
+        <tr>
+            <th> Sopir </th><th>:</th><td> 
+                <input type="text"  class="read" readonly name="sopirLamakpcc" id="sopirLamakpcc" ></td>
+                
+                <td rowspan="6" colspan="2"  align="center"> 
+                    <input type="text" readonly name="kgLamakpcc" class="indicator" value="" id="hasilkgLamakpcc">
+                    
+                <br> 
+                <button id="tbiLamakpcc" >TIMBANG ISI</button>  
+                </td> 
+        </tr>
+        <tr>
+            <th> Tgl. Masuk </th><th>:</th><td><input type="text" name="tglmasukLamakpcc" id="tglmasukLamakpcc" readonly class="read" ></td> 
+        </tr> 
+        <tr>
+            <th>Tara</th><th>:</th><td><input type="text" class="read" name="tbkosongLamakpcc" id="tbkosongLamakpcc" readonly>Kg</td>
+        </tr>
+        <tr>
+            <th>Bruto</th><th>:</th><td><input type="text" class="read" name="bruttoLamakpcc" id="bruttoLamakpcc" readonly>Kg</td>
+        </tr>
+        <tr>
+            <th>Netto</th><th>:</th><td><input type="text" class="read" name="nettoLamakpcc" id="nettoLamakpcc" readonly>Kg</td>
+        </tr>
+        <tr>
+            <th> </th><th> </th><td><br><button id="save_hasilLamakpcc" >Simpan Data</button> 
+                <button id="reset_dataLamakpcc" >Reset Data</button>
+                 <p id="infoLamakpcc"></p></td>
+        </tr>
+    </table>
+</form>  
+</div> 
+    </section>
+
+
+    <!-- Section / Contact -->
+    <section id="contact" class="section min-fullheight">
+
+        <!-- BG Map -->
+        <div class="bg-image with-joiner"><img src="assets/img/photos/contact_me.jpg" alt="Image not found"/></div>
+
+        <div class="container-fluid container-custom">
+        </div>
+        <div class="container container-sm">
+            <div class="contact-box animated" data-animation="fadeInUp">
+                <div class="row no-padding">
+                    <div class="col-md-12">
+                        <div class="box">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+	<div id="title">
+		<h1>Aplikasi Jembatan Timbang</h1>
+	</div>
+	
+ 
+<!-- Content / End -->
+
+<!-- Mobile Navigation Toggle -->
+<div id="mobile-nav-toggle"><span></span><span></span><span></span></div>
+
+<!-- Notification Bar -->
+<div id="notification-bar"></div>
+
+<!-- JS Libraries -->
+<script src="../assets/js/jquery-2.2.4.min.js"></script>
+
+<!-- JS Plugins -->
+<script src="../assets/js/plugins.js"></script>
+
+<!-- JS Core -->
+<script src="../assets/js/core.js"></script>
+
+
+<!-- AngularJS -->
+<!-- AngularJS -->
+<!-- <script src="../assets/js/angular.min.js"></script> -->
+
+<!-- Firebase -->
+<!-- <script src="assets/js/firebase.js"></script> -->
+
+<!-- AngularFire -->
+<!-- <script src="../assets/js/angularfire.min.js"></script> -->
+
+<!-- <script src='../assets/js/main.js'></script> -->
+<script src="assets/js/typed.js"></script>
+
+		<!-- <script type="text/javascript" src="jquery.simplemodal.1.4.4.min.js"></script> --> 
+
+  </body>
+</html>

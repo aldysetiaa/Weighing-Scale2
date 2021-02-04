@@ -1,0 +1,68 @@
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #fff; 
+}
+#title {
+	text-align: center;
+}
+
+#white_space {
+	height: 20px;
+}
+
+#send_text {
+	width: 330px;
+}
+
+#send_button {
+	width: 100px;
+}
+
+#endofline_combobox {
+	width: 120px;
+}
+
+#receive_area {
+	height: 250px;
+}
+
+#receive_textarea {
+	width: 98%;
+	height: 100%;
+	resize: none;
+}
+
+#connect_line {
+	text-align: right;
+}
+
+.label {
+	text-align: right;
+	display: inline-block;
+}
+
+.combobox {
+	width: 100px;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+#connect_button {
+	width: 100px;
+}
+
+#simplemodal-overlay {background-color:#000;}
+#simplemodal-container {height:50px; width:200px; color:#bbb; background-color:#333; border:1px solid #444; padding:5px;}
+
+#simplemodal-container a.modalCloseImg {
+	background:url(x.png) no-repeat;
+	width:25px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-15px;
+	right:-18px;
+	cursor:pointer;
+}

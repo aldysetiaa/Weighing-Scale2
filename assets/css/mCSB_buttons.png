@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+
+    <title>Lorenzo Greco - Mobile Engineer, Developer and Designer</title>
+
+    <!-- Meta -->
+    <meta name="author" content="Lorenzo Greco">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-language" content="en">
+    <meta name="Description" content="I am primarily a software engineer with a background and passion for mobile technology. Mobile for me is not simply another avenue of the computing industry but it represents the future of what we will be interacting with.">
+    <meta name="Keywords" content="mobile, applications, developer, ios, android, software, engineer, android, lecce, salento,">
+    <meta name="robots" content="index,nofollow" />
+    <meta name="og:description" content="I am primarily a software engineer with a background and passion for mobile technology. Mobile for me is not simply another avenue of the computing industry but it represents the future of what we will be interacting with.">
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Lorenzo Greco - Mobile Engineer, Developer and Designer" />
+    <meta property="og:title" content="Lorenzo Greco - Mobile Engineer, Developer and Designer" />
+    <meta property="og:image" content="assets/img/photos/profile-bg1.jpg" />
+    <meta property="og:image:secure_url" content="assets/img/photos/profile-bg1.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lorenzogreco.com/" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content=https://lorenzogreco.com/">
+    <meta name="twitter:title" content="Lorenzo Greco - Mobile Engineer, Developer and Designer">
+    <meta name="twitter:description" content="I am primarily a software engineer with a background and passion for mobile technology. Mobile for me is not simply another avenue of the computing industry but it represents the future of what we will be interacting with.">
+    <meta name="twitter:creator" content="Lorenzo Greco">
+    <meta name="twitter:image" content="assets/img/photos/profile-bg1.jpg">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Lorenzo Greco - Mobile Engineer, Developer and Designer">
+    <meta itemprop="description" content="I am primarily a software engineer with a background and passion for mobile technology. Mobile for me is not simply another avenue of the computing industry but it represents the future of what we will be interacting with.">
+    <meta itemprop="image" content="assets/img/photos/profile-bg1.jpg">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:600,700" rel="stylesheet">
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- CSS Base -->
+    <link id="theme" rel="stylesheet" href="assets/css/themes/theme-orange.css" />
+
+</head>
+
+<body class="one-page header-vertical" ng-controller='mainCtrl'>
+
+<!-- Loader -->
+<div id="page-loader" class="bg-white">
+    <svg class="loader" width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle class="circle" fill="none" stroke-width="2" stroke-linecap="round" cx="16" cy="16" r="14"></circle></svg>
+    <span class="loading-txt text-muted">Wait for some magic...</span>
+</div>
+<!-- Loader / End -->
+
+<!-- Header -->
+<header id="header">
+
+    <!-- Owner -->
+    <a title="link" href="#home" class="owner">
+        <img src="assets/img/photos/profile-photo.jpg" alt="Image not found" class="image">
+        <div class="content">
+            <h2 class="name">Lorenzo Greco</h2>
+            <h2 class="caption text-muted">Mobile Engineer</h2>
+        </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="main-menu">
+        <div class="nav-wrapper">
+            <ul class="nav nav-primary">
+                <li><a title="link" href="#home"><i class="li-home"></i>Start</a></li>
+                <li><a title="link" href="#about"><i class="li-feedback"></i>About me</a></li>
+                <li><a title="link" href="#cases"><i class="li-imac"></i>Cases</a></li>
+                <li><a title="link" href="#latest-posts"><i class="li-pen"></i>Latest posts</a></li>
+                <li><a title="link" href="#contact"><i class="li-email"></i>Contact</a></li>
+            </ul>
+        </div>
+        <span class="selector"></span>
+    </nav>
+
+    <!-- Bottom -->
+    <div class="bottom">
+
+        <ul class="list-inline mb-10">
+            <li class="list-inline-item"><a title="link" href="https://www.facebook.com/lorenzo.greco.319" target="_blank" class="icon icon-circle icon-hover icon-secondary icon-sm"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item"><a title="link" href="https://www.linkedin.com/in/lorenzo-greco-61118195/"  target="_blank" class="icon icon-circle icon-hover icon-secondary icon-sm"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item"><a title="link" href="https://www.instagram.com/lorenzogr90"  target="_blank" class="icon icon-circle icon-hover icon-secondary icon-sm"><i class="ti-instagram"></i></a></li>
+        </ul>
+        <span class="text-muted">P. IVA: 04682970753</span><br>
+        <span class="text-muted"><script>document.write(new Date().getFullYear())</script>©.</span>
+    </div>
+
+</header>
+<!-- Header / End -->
+
+<!-- Content -->
+<div id="content">
+
+    <!-- Section / Home -->
+    <section id="home" class="section fullheight dark">
+
+        <!-- BG Slideshow -->
+        <div class="bg-slideshow">
+            <div class="bg-image zooming"><img src="assets/img/photos/profile-bg1.jpg" alt="Image not found"></div>
+            <div class="bg-image zooming"><img src="assets/img/photos/profile-bg2.jpg" alt="Image not found"></div>
+            <div class="bg-image zooming"><img src="assets/img/photos/profile-bg3.jpg" alt="Image not found"></div>
+        </div>
+
+        <div class="v-center container-fluid container-custom">
+            <div class="row">
+                <div class="col-md-12 w-100">
+                    <h1 class="display-3">Lorenzo Greco</h1>
+                    <h2 class="caption text-primary"><span id="role">Software engineer</span></h2>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Section / About -->
+    <section id="about" class="section">
+
+        <div class="container container-lg">
+
+            <!-- BG Side -->
+            <div class="bg-side bg-left">
+                <img src="assets/img/items/googlepixel.png" alt="Image not found">
+                <img src="assets/img/items/transp.png" alt="Image not found">
+            </div>
+
+            <!-- BG Side -->
+            <div class="bg-side bg-right">
+                <img src="assets/img/items/iphone.png" alt="Image not found">
+            </div>
+            <div class="row rowmain">
+                <div class="col-md-7">
+                    <h2>About me</h2>
+                    <p class="lead">I am primarily a software engineer with a background and passion for mobile technology. Mobile for me is not simply another avenue of the computing industry but it represents the future of what we will be interacting with.</p>
+                    <p>I have a strong technical background on Android and iOS and I have been working as a mobile developer on many projects during my university studies and my work experiences. Native applications are where my heart is at the moment but I see the place for web and hybrid technologies and how they will evolve in the future.</p>
+                    <h3 class="mt-60">Services</h3>
+                    <div class="row text-xs-center text-sm-left">
+                        <div class="col-sm-6">
+                            <!-- Feature -->
+                            <div class="feature feature-1 animated fadeIn visible" data-animation="fadeIn">
+                                <span class="icon icon-primary icon-md"><i class="li-push"></i></span>
+                                <h5 class="mb-0">Mobile Development</h5>
+                                <span class="text-muted">Native Android and iOS apps</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <!-- Feature -->
+                            <div class="feature feature-1 animated fadeIn visible" data-animation="fadeIn">
+                                <span class="icon icon-primary icon-md"><i class="li-theme"></i></span>
+                                <h5 class="mb-0">Mobile UI/UX Design</h5>
+                                <span class="text-muted">Beautiful designs and user experiences</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-xs-center  text-sm-left">
+                        <div class="col-sm-6">
+                            <!-- Feature -->
+                            <div class="feature feature-1 animated fadeIn visible" data-animation="fadeIn">
+                                <span class="icon icon-primary icon-md"><i class="li-paintcylinder"></i></span>
+                                <h5 class="mb-0">Graphic Design</h5>
+                                <span class="text-muted">Impress your clients with cool designs</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <!-- Feature -->
+                            <div class="feature feature-1 animated fadeIn visible" data-animation="fadeIn">
+                                <span class="icon icon-primary icon-md"><i class="li-laptop"></i></span>
+                                <h5 class="mb-0">Web Development</h5>
+                                <span class="text-muted">A fresh look for your business</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h3 class="mt-60">My Skills</h3>
+                    <div class="progress-wrapper">
+                    <progress class="progress mb-5" value="100" max="100"></progress>
+                    <strong class="text-sm ng-binding">iOS programming</strong>
+                </div><div class="progress-wrapper">
+                    <progress class="progress mb-5" value="100" max="100"></progress>
+                    <strong class="text-sm ng-binding">Android programming</strong>
+                </div><div class="progress-wrapper">
+                    <progress class="progress mb-5" value="100" max="100"></progress>
+                    <strong class="text-sm ng-binding">Software engineering</strong>
+                </div><div class="progress-wrapper">
+                    <progress class="progress mb-5" value="100" max="100"></progress>
+                    <strong class="text-sm ng-binding">Mobile app design</strong>
+                </div><div class="progress-wrapper">
+                    <progress class="progress mb-5" value="100" max="100"></progress>
+                    <strong class="text-sm ng-binding">Database Modeling and Management</strong>
+                </div><div class="progress-wrapper">
+                    <progress class="progress mb-5" value="100" max="100"></progress>
+                    <strong class="text-sm ng-binding">RESTful Web Services</strong>
+                </div><div class="progress-wrapper">
+                    <progress class="progress mb-5" value="75" max="100"></progress>
+                    <strong class="text-sm ng-binding">Front-end Web development</strong>
+                </div><div class="progress-wrapper">
+                    <progress class="progress mb-5" value="75" max="100"></progress>
+                    <strong class="text-sm ng-binding">Back-end development</strong>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h3 class="mt-60 text-lg-center mb-30">Experience</h3>
+
+                    <div class="row  text-xs-center">
+                        <div class="col-sm-6 col-xs-6 col-md-3">
+                        <img class="bg-image " ng-src="assets/img/locations/lecce.jpg" alt="Image not found" src="assets/img/locations/lecce.jpg">
+                        <div class="col-lg-12">
+                            <a title="link" href="http://www.vidyasoft.it/" target="_blank"><img ng-src="assets/img/companies/vidyasoft.jpg" alt="Image not found" class="img-circle mb-20 m10 mt-20" src="assets/img/companies/vidyasoft.jpg"></a>
+                            <h5 class="mb-5 text-white">VIDYASOFT</h5>
+                            <h5 class="text-sm text-muted-light mt-5">Mobile Consultant</h5>
+                        </div>
+                    </div><div class="col-sm-6 col-xs-6 col-md-3">
+                        <img class="bg-image " ng-src="assets/img/locations/london.jpg" alt="Image not found" src="assets/img/locations/london.jpg">
+                        <div class="col-lg-12">
+                            <a title="link" href="https://weareleto.com/" target="_blank"><img ng-src="assets/img/companies/leto.jpg" alt="Image not found" class="img-circle mb-20 m10 mt-20" src="assets/img/companies/leto.jpg"></a>
+                            <h5 class="mb-5 text-white">LETO</h5>
+                            <h5 class="text-sm text-muted-light mt-5">Mobile Developer</h5>
+                        </div>
+                    </div><div class="col-sm-6 col-xs-6 col-md-3">
+                        <img class="bg-image " ng-src="assets/img/locations/unisalento.jpg" alt="Image not found" src="assets/img/locations/unisalento.jpg">
+                        <div class="col-lg-12">
+                            <a title="link" href="http://avrlab.it/" target="_blank"><img ng-src="assets/img/companies/unisalento.jpg" alt="Image not found" class="img-circle mb-20 m10 mt-20" src="assets/img/companies/unisalento.jpg"></a>
+                           <h5 class="mb-5 text-white">UNIVERSITY OF SALENTO</h5>
+                            <h5 class="text-sm text-muted-light mt-5">Software Engineer</h5>
+                        </div>
+                    </div><div class="col-sm-6 col-xs-6 col-md-3">
+                        <img class="bg-image " ng-src="assets/img/locations/hers.jpg" alt="Image not found" src="assets/img/locations/hers.jpg">
+                        <div class="col-lg-12">
+                            <a title="link" href="http://www.herts.ac.uk/" target="_blank"><img ng-src="assets/img/companies/hertfordshire.jpg" alt="Image not found" class="img-circle mb-20 m10 mt-20" src="assets/img/companies/hertfordshire.jpg"></a>
+                           <h5 class="mb-5 text-white">UNIVERSITY OF HERTFORDSHIRE</h5>
+                            <h5 class="text-sm text-muted-light mt-5">Research Fellow</h5>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-30">
+                <div class="col-md-12">
+                <p class="lead  text-xs-center text-lg-center">Not enough?</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-xs-center text-lg-center">
+                    <a title="link" class="btn btn-sm btn-outline-primary " href="cv/cv-lorenzo_greco_en.pdf" target="_blank">Check out my CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section / portfolio -->
+    <section id="cases" class="section" >
+
+        <div class="container-fluid container-custom">
+            <h2 class="mb-50">Cases</h2>
+            <!-- Filter -->
+            <nav class="mb-40">
+                <ul class="nav nav-pills filter-isotope mb-50 text-center" data-filter-list="#works-list">
+                    <li class="nav-item active"><a title="link" href="#" class="nav-link" data-filter="*"><i class="pe-7s-folder"></i>All</a></li>
+                    <li class="nav-item"><a title="link" href="#" class="nav-link" data-filter=".filter-one"><i class="pe-7s-graph1"></i>iOS</a></li>
+                    <li class="nav-item"><a title="link" href="#" class="nav-link" data-filter=".filter-two"><i class="pe-7s-comment"></i>Android</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="works-list" class="row masonry no-padding" style="position: relative; height: 0px;">
+            <div class="masonry-sizer col-lg-3 col-sm-4 col-xs-6"></div>
+            <div class="masonry-item filter-one filter-two col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/mylibretto.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/mylibretto.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">MyLibretto</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS &amp; Android app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-two col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/wallpaperhdplus.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                       <img alt="Image not found" src="assets/img/projects/wallpaperhdplus.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">Wallpaper HD +</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">Android app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one filter-two  col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/elate.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/elate.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">Elate</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS &amp; Android app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-two col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/aiwip.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/aiwip.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">Aiwip</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">Android app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-two col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/newday.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/newday.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">Newday</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">Android app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one filter-two col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/letotoggl.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/letotoggl.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">LETO Toggl</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS &amp; Android app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/mymedia.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/mymedia.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                           <h3 class="mb-0">MyMedia</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS app</h5>
+                   </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/mrglue.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/mrglue.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">Mr Glue Stories</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/beautyspotter.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/beautyspotter.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                           <h3 class="mb-0">Beautyspotter.</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one filter-two col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/fivethings.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                       <img alt="Image not found" src="assets/img/projects/fivethings.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">5 things to read</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS &amp; Android app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-two col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/daily.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/daily.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">Daily</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">Android app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/mytime.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/mytime.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">MyTime</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/tcpudpclient.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img  alt="Image not found" src="assets/img/projects/tcpudpclient.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">TCP/UDP Client</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/moodsense.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img  alt="Image not found" src="assets/img/projects/moodsense.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">Moodsense</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/triviaquiz.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img  alt="Image not found" src="assets/img/projects/triviaquiz.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">Trivia quiz</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="masonry-item filter-one col-lg-3 col-sm-4 col-xs-6">
+                <!-- Image Box -->
+                <a title="link" href="projects/en/poolscore.html" data-toggle="ajax-modal">
+                <div class="image-box image-hover inner-title title-hover">
+                    <div class="image">
+                        <img alt="Image not found" src="assets/img/projects/poolscore.jpg">
+                    </div>
+                    <div class="title text-xs-center">
+                            <h3 class="mb-0">Pool Score</h3>
+                            <h5 class="text-sm text-muted mt-10 mb-0">iOS app</h5>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section / Latest Posts -->
+    <section id="latest-posts" class="section">
+
+        <div class="container-fluid container-custom">
+            <h2 class="mb-15">Latest Posts<a title="link" href="blog.html" class="ml-20 btn btn-secondary btn-sm animated" data-animation="fadeInRight">Go to Blog</a></h2>
+            <p class="lead mb-40">News from the web</p>
+
+            <div id="slick" class="carousel carousel-items">
+                <div class="carousel-item" ng-repeat = "post in posts">
+                    <!-- Post - Item -->
+                    <article class="post item">
+                        <div class="post-image">
+                            <div class="image-cropped"  ng-style="{'background-image': 'url({{post.image}}), url(assets/img/placeholder.jpg)'}"></div>
+                        </div>
+                        <div class="post-content">
+                            <span class="date text-muted">{{post.date}}</span>
+                            <h4><a title="link"  target="_blank" href="{{post.url}}">{{post.title}}</a></h4>
+                            <p>{{post.description}}</p>
+                            <a title="link"  target="_blank" href="{{post.url}}" class="btn btn-submit btn-sm width-100">Read more</a>
+                        </div>
+                        <ul class="post-meta">
+                            <li><i class="ti-pencil"></i>{{post.author}}</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Section / Contact -->
+    <section id="contact" class="section min-fullheight">
+
+        <!-- BG Map -->
+        <div class="bg-image with-joiner"><img src="assets/img/photos/contact_me.jpg" alt="Image not found"/></div>
+
+        <div class="container-fluid container-custom">
+            <h2 class="mb-50 text-xs-center">Contact</h2>
+        </div>
+        <div class="container container-sm">
+            <div class="contact-box animated" data-animation="fadeInUp">
+                <div class="row no-padding">
+                    <div class="col-md-12">
+                        <div class="box">
+                            <h4><a title="link" href="blog-post.html">Contact me</a></h4>
+                            <ul class="contact-list">
+                                <li>
+                                    <i class="li-email"></i>
+                                    <div class="content">
+                                        <span class="text-xs text-muted mb-5">E-mail:</span>
+                                        <a title="link" href="mailto:lorenzo.gapp@gmail.com" class="text-lg">lorenzo.gapp@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="li-push"></i>
+                                    <div class="content">
+                                        <span class="text-xs text-muted mb-5">Phone:</span>
+                                        <a title="link" href="tel:+393277306969">+39 <span class="text-lg">327 730 69 69</span></a>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="li-map1"></i>
+                                    <div class="content">
+                                        <span class="text-xs text-muted mb-5">Address:</span>
+                                        <span class="text-lg">Sogliano Cavour, Lecce, IT</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+<!-- Content / End -->
+
+<!-- Mobile Navigation Toggle -->
+<div id="mobile-nav-toggle"><span></span><span></span><span></span></div>
+
+<!-- Notification Bar -->
+<div id="notification-bar"></div>
+
+<!-- JS Libraries -->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+
+<!-- JS Plugins -->
+<script src="assets/js/plugins.js"></script>
+
+<!-- JS Core -->
+<script src="assets/js/core.js"></script>
+
+
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+<script src='assets/js/main.js'></script>
+<script src="assets/js/typed.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55379446-4', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

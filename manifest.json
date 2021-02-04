@@ -1,0 +1,21 @@
+{
+  "name": "Aplikasi Jembatan Timbang",
+  "description": "PT KRNG Indonesia",
+  "version": "1.1",
+  "manifest_version": 2,
+  "content_scripts": [{
+     "js": ["jquery.min.js", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"],
+     "matches": ["http://*/*", "https://*/*"]
+   }],
+  "permissions": ["serial","http://www.google.com"],
+    "minimum_chrome_version": "23", 
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+	     "transient": true
+    }
+  },
+
+  "icons": { "16": "icon_16.png", "128": "icon_128.png" },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://pagead2.googlesyndication.com; object-src 'self'"
+}
