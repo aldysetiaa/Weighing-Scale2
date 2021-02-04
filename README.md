@@ -6,3 +6,4 @@ Aplikasi untuk menghubungkan jembatan timbang dengan database mysql menggunakan 
 #=================== FOR WEIGHING SCALE ==========================
 
 The application for connecting the weighbridge with the mysql database uses the PHP AJAX API, this application has been running for 2 years until now, and has no problems, is easy to customize, and this application runs on the google chrome extension
+![alt text] (https://github.com/aldysetiaa/Weighing-Scale/blob/main/weghingscale.png)
