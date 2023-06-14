@@ -1,3 +1,4 @@
+# Premium Feature
 Pada Repo sebelumnya,
 https://github.com/aldysetiaa/Weighing-Scale
 Aplikasi untuk menghubungkan jembatan timbang dengan database mysql menggunakan API PHP AJAX, aplikasi ini sudah berjalan 2 tahun sampe saat ini, dan tidak ada kendala, mudah di kustomisasi, dan aplikasi ini berjalan di extension google chrome,
