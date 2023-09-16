@@ -1,3 +1,5 @@
+# Demo Youtube
+https://youtu.be/8w9Vxeg1t_U
 # Premium Feature
 Pada Repo sebelumnya,
 https://github.com/aldysetiaa/Weighing-Scale
