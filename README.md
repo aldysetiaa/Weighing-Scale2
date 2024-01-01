@@ -1,6 +1,6 @@
 # Demo Youtube
 https://youtu.be/8w9Vxeg1t_U
-# Number Plate, Type and Color Recognition (ALPR/ANPR), CCTV,  on-premises or on-cloud
+# Number Plate, Model and Color Recognition (ALPR/ANPR), CCTV,  on-premises or on-cloud
 Pada Repo sebelumnya,
 https://github.com/aldysetiaa/Weighing-Scale
 Aplikasi untuk menghubungkan jembatan timbang dengan database mysql menggunakan API PHP AJAX, aplikasi ini sudah berjalan 2 tahun sampe saat ini, dan tidak ada kendala, mudah di kustomisasi, dan aplikasi ini berjalan di extension google chrome,
@@ -40,7 +40,7 @@ Complete Features:
 - Can be connected to more than 1 serial port, for example there are 5 scales in 1 factory, then this system can be customized for 1 PC but connected simultaneously to 5 scales
 - Can be connected to CCTV IPCAM (tested: Hikvision ds-2cd2010f-i4mm), and save images during weighing (minimizes the risk of fraud during weighing)
 - ANPR/ALPR (Automatic Number Plate Recognition / Automatic License Plate Recognition) this latest feature can be integrated with connected CCTV, to read vehicle plates from CCTV images, thereby minimizing fraud
-- Vehicle Type and Color reading, in addition to ANPR/ALPR, will automatically recognize what car is being weighed, along with the contrasting color of the vehicle as well
+- Vehicle Model and Color reading, in addition to ANPR/ALPR, will automatically recognize what car is being weighed, along with the contrasting color of the vehicle as well
 - Can be installed on-premises or on-cloud (shared hosting is possible)
 - Backup Query Insert
 - Can be integrated with Internal ERP/using REST API
