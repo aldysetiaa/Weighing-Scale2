@@ -1,3 +1,4 @@
+# Software / Aplikasi Berbasis Web
 # Demo Youtube
 https://youtu.be/8w9Vxeg1t_U
 # Number Plate, Model and Color Recognition (ALPR/ANPR), CCTV,  on-premises or on-cloud
@@ -15,7 +16,7 @@ Fitur Lengkap :
 - Dapat digunakan sebagai Serial Port Monitor
 - Dapat menggunakan In dan Out, atau berdasarkan beban Timbang 1 & 2 mana yang lebih kecil bisa jadi tara
 - Dapat terhubung lebih dari 1 serial port, misal ada 5 timbangan dalam 1 pabrik, maka sistem ini bisa di custom untuk 1 PC tapi terhubung sekaligus ke 5 Timbangan
-- Dapat terhubung dengan CCTV IPCAM (tested : Hikvision ds-2cd2010f-i4mm), dan menyimpan gambar saat penimbangan (meminimalisir risiko kecurangan saat penimbangan)
+- Dapat terhubung dengan CCTV IPCAM (tested : Hikvision ds-2cd2010f-i4mm) ataupun webcam biasa, dan menyimpan gambar saat penimbangan (meminimalisir risiko kecurangan saat penimbangan)
 - ANPR/ALPR (Automatic Number Plate Recognition / Automatic License Plate Recognition) fitur terbaru ini dapat di integrasikan dengan CCTV yang terhubung, untuk melakukan pembacaan Plat Kendaraan dari citra CCTV, sehingga meminimalisir kecurangan
 - Pembacaan Jenis Kendaraan dan Warna, selain ANPR/ALPR, otomatis akan mengenali mobil apa yang sedang di timbang, beserta warna kontras dari kendaraan nya juga
 - Bisa di install secara On-premises atau On-Cloud (shared hosting bisa)
@@ -23,7 +24,8 @@ Fitur Lengkap :
 - Dapat di integrasikan dengan ERP Internal/menggunakan REST API
 - Mendukung operasi sistem terbaru seperti windows 10 dan 11
 
-#=================== FOR WEIGHING SCALE ==========================
+
+# Software / Web Base Application
 In the previous Repos,
 https://github.com/aldysetiaa/Weighing-Scale
 The application for connecting the weigh bridge with the MySQL database uses the PHP AJAX API, this application has been running for 2 years now, and there are no problems, easy to customize, and this application runs on the Google Chrome extension,
