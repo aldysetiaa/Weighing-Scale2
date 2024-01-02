@@ -64,3 +64,5 @@ Complete Features:
 ![alt text](https://github.com/aldysetiaa/Weighing-Scale/blob/main/indicator.jpg)
 
 ![alt text](https://github.com/aldysetiaa/Weighing-Scale/blob/main/ind2.jfif)
+
+#software #aplikasi #timbangan
